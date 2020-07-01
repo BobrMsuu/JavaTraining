@@ -1,5 +1,6 @@
 package generics;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,23 +21,24 @@ public class GenericMethods {
 //        System.out.println("Max for array of String "+findMax(stringArray));
 
         Number n = Integer.valueOf(20);
+
+        List<Number> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        printElements(list);
 //
-///*        List<Number> list = new ArrayList<>();
-//        list.add(1);
-//        list.add(2);
-//        list.add(3);
-//        list.add(4);*/
-//
-//        List<Integer> integers = Arrays.asList(intArray);
-//        List<Double> doubles = Arrays.asList(doubleArray);
+        List<Integer> integers = Arrays.asList(intArray);
+        List<Double> doubles = Arrays.asList(doubleArray);
 //        printElements(integers);
 //        printElements(doubles);
+
 //
+        MyBox<Integer> myBox = new MyBox<Integer>("");
 //
-//        MyBox<Integer> myBox = new MyBox<Integer>("");
-//
-//        Double aDouble = MyBox.returnValue(0.03);
-//        System.out.println(aDouble);
+        Double aDouble = MyBox.returnValue(0.03);
+        System.out.println(aDouble);
 
     }
 
@@ -67,7 +69,7 @@ public class GenericMethods {
 
 
 
-    private static void printElements(List<? extends Number> list){
+    private static void printElements(List< Number> list){
         for(Number n : list){
             System.out.println(n);
         }
