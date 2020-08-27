@@ -17,8 +17,8 @@ public class HigherOrderFunctionExample {
         persons.add(new RichPerson("Sam", "Brown", 80000, 40));
         persons.add(new RichPerson("Tony", "Grey", 90000, 50));
         testPredicate(persons);
-        testFunction(persons);
-        testConsumer(persons);
+//        testFunction(persons);
+//        testConsumer(persons);
 
     }
 
